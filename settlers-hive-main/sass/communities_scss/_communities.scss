@@ -1,0 +1,489 @@
+@import "../variables/variables";
+
+.communities {
+  font-family: $bodyFont;
+  font-size: $body-fs;
+}
+.container {
+  max-width: 1320px;
+  margin: $m0 auto;
+  padding: $p3;
+}
+#map {
+  position: relative;
+}
+
+.interactive-map {
+  position: relative;
+  .communities-banner-content {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    .map-h2 {
+      color: $mauve-light;
+      font-family: $headingFont;
+      font-size: $h2-fs;
+    }
+    .map-text {
+      color: $cream;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.map-pin {
+  width: 20px;
+}
+
+.map-window {
+  width: 225px;
+  height: 225px;
+  background: url(http://blacksettlersa.web.dmitcapstone.ca/wp-content/uploads/2023/03/image-from-rawpixel-id-6129082-jpeg.jpg);
+  padding: 20px;
+
+  h5 {
+    font-family: $headingFont;
+    font-size: $h5-fs;
+    color: $charcoal;
+    margin: 0.75rem 0;
+  }
+
+  p {
+    color: $charcoal;
+    font-weight: 600;
+    padding: $p1 $p1;
+  }
+
+  .map-window-btn {
+    background-color: $mauve-light;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+  }
+
+  .map-window-btn a {
+    text-decoration: none;
+    box-shadow: 5px 10px #333;
+  }
+}
+
+.communities-section {
+  padding: 5%;
+  background-color: $brown-dark;
+
+  h3 {
+    font-family: $headingFont;
+    font-size: $h3-fs;
+    text-transform: uppercase;
+    color: $mauve-light;
+    padding: $p2 $p1;
+  }
+
+  p {
+    color: $cream;
+    padding: $p2 $p1;
+    margin-bottom: $m2;
+  }
+
+  .community-mobile-btn {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .community-mobile-btn div {
+    background: url(http://blacksettlersa.web.dmitcapstone.ca/wp-content/uploads/2023/03/traditional-paper-background.jpg);
+    text-align: center;
+    width: clamp(15rem, 16.5rem + 1rem, 16.5rem);
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $charcoal;
+    }
+  }
+
+  .community-mobile-btn div:hover,
+  .community-mobile-btn div:active,
+  .communities-card:hover,
+  .communities-card:active {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+    -webkit-transform: translateY(-0.5rem);
+    -moz-transform: translateY(-0.5rem);
+    -ms-transform: translateY(-0.5rem);
+    -o-transform: translateY(-0.5rem);
+  }
+
+  .communities-card {
+    background-color: $pink-light;
+    width: clamp(25rem, 32rem + 1rem, 34rem);
+    height: 56.1rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    h5 {
+      font-family: $headingFont;
+      font-size: $h5-fs;
+      color: $burntOrange-dark;
+      margin: 0.75rem 2.5rem 0.25rem;
+    }
+    p {
+      color: $burntOrange-dark;
+      padding: 0 2.5rem 0.25rem;
+      line-height: 1.25;
+    }
+
+    img {
+      width: 100%;
+      height: 31.8rem;
+      object-fit: cover;
+    }
+  }
+
+  .community-card-group div:nth-child(2n) {
+    background-color: $burntOrange-dark;
+
+    h5,
+    p {
+      color: $pink-light;
+    }
+  }
+}
+
+.indi-comm-main {
+  background-color: $brown-dark;
+  .container {
+    max-width: 1320px;
+    margin: $m0 auto;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    h2 {
+      font-family: $headingFont;
+      font-size: $h2-fs;
+      padding: $p2 $p1;
+      color: $cream;
+    }
+  }
+  .background-timeline-container {
+    padding: $p2 $p2;
+    width: 100%;
+    h3 {
+      font-family: $headingFont;
+      font-size: $h2-fs;
+      padding-bottom: $p2;
+      color: $charcoal;
+    }
+    .origins-blurb {
+      font-family: $bodyFont;
+      font-size: $body-fs;
+      background-color: $cream;
+      color: $charcoal;
+      padding: $p2 $p2;
+    }
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-content {
+    margin: auto !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // max-width: 600px !important;
+    height: 100vh;
+    img {
+      max-width: 600px;
+      max-height: 600px;
+      object-fit: cover;
+    }
+    #title {
+      font-family: $headingFont;
+      font-size: $h3-fs;
+      margin-bottom: 0.5em;
+      background-color: transparent;
+      color: $cream;
+      text-align: left;
+      padding: 0;
+      margin-top: 1.5rem;
+    }
+
+    #caption {
+      font-family: $bodyFont;
+      font-size: $body-fs;
+      text-align: left;
+      width: auto;
+      height: auto;
+      color: $cream;
+      padding: 0;
+    }
+  }
+
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  .modal-content,
+  #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  img.demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .origins-blurb {
+    width: 100%;
+  }
+}
+.photo-albums-section h3 {
+  background-color: $brown-dark;
+  font-family: $headingFont;
+  font-size: $h3-fs;
+  color: $cream;
+  padding: $p2 $p1;
+  text-transform: uppercase;
+}
+.photo-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  p {
+    font-family: $bodyFont;
+    font-size: $body-fs;
+    padding: $p2 $p1;
+    color: $cream;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .communities-section {
+    .community-mobile-btn {
+      display: none;
+    }
+    .community-card-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
+    .communities-card {
+      flex-basis: calc(33% - 2rem);
+      margin: 1rem;
+    }
+
+    .community-card-group div:nth-last-child(1) {
+      display: flex;
+      align-items: center;
+      width: clamp(65rem, 70rem + 1rem, 70rem);
+      height: 33.5rem;
+      flex-basis: auto;
+      margin: 1rem auto;
+      a {
+        flex: 1;
+      }
+    }
+  }
+
+  .all-things-card-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    img {
+      height: 420px;
+      object-fit: cover;
+    }
+  }
+  .indi-comm-main .container {
+    h2 {
+      padding: $p4 $p1;
+    }
+    .background-timeline-container {
+      padding: $p3 $p3;
+      .origins-blurb {
+        padding: $p3 $p3;
+      }
+    }
+    .photo-albums-section {
+      h3 {
+        padding: $p4 $p2;
+      }
+      .photo-grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem;
+        .photo-card img {
+          background: url(http://blacksettlersa.web.dmitcapstone.ca/wp-content/uploads/2023/03/image-from-rawpixel-id-6129082-jpeg.jpg);
+          padding: 2.5rem;
+          border-radius: 0.8rem;
+          -webkit-border-radius: 0.8rem;
+          -moz-border-radius: 0.8rem;
+          -ms-border-radius: 0.8rem;
+          -o-border-radius: 0.8rem;
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .all-things-section {
+      background-color: $brown-dark;
+      padding: $p4 0;
+      h3 {
+        font-family: $headingFont;
+        font-size: $h3-fs;
+        color: $cream;
+        padding: $p3 $p1;
+      }
+
+      .all-things-card {
+        padding: $p3 $p3;
+      }
+
+      .all-things-card-content {
+        a {
+          text-decoration: none;
+        }
+        h5 {
+          font-size: $h5-fs;
+          color: $cream;
+          text-transform: none;
+          padding: $p1 0px;
+        }
+        .all-things-excerpt p {
+          font-family: $bodyFont;
+          font-size: $body-fs;
+          padding: $p1 0px;
+          color: $cream;
+        }
+      }
+    }
+
+    .single-all-things-container {
+      .single-all-things-image img {
+        width: 80vh;
+        object-fit: cover;
+        display: block;
+        background: url(http://blacksettlersa.web.dmitcapstone.ca/wp-content/uploads/2023/03/traditional-paper-background.jpg);
+        padding: $p1 $p1;
+      }
+
+      .single-all-things-content {
+        background-color: $cream;
+        padding: $p1;
+      }
+    }
+  }
+}

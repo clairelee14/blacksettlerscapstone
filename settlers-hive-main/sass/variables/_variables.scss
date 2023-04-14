@@ -1,0 +1,48 @@
+/* Fonts & Sizing */
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Yeseva One', cursive;
+$headingFont: "Yeseva One", cursive;
+$bodyFont: "Montserrat", sans-serif;
+$h1-fs: clamp(3rem, 3.26rem + 1rem, 3.26rem);
+$h2-fs: clamp(2.7rem, 2.86rem + 1rem, 2.86rem);
+$h3-fs: clamp(2.4rem, 2.51rem + 1rem, 2.51rem);
+$h4-fs: clamp(2.1rem, 2.21rem + 1rem, 2.21rem);
+$h5-fs: clamp(1.8rem, 2.04rem + 1rem, 2.04rem);
+$body-fs: clamp(1.28rem, 1.64rem + 1rem, 1.64rem);
+$headingFontWeight: 300;
+
+/* Colour Palette */
+$mauve-dark: #847372;
+$mauve-medium: #a69090;
+$mauve-light: #c3b8b4;
+
+$burntOrange-dark: #905329;
+$burntOrange-medium: #a95d29;
+$burntOrange-light: #e4884a;
+
+$cream: #e6e1d5;
+$charcoal: #333335;
+
+$brown-dark: #755b49;
+$brown-medium: #947969;
+$pink-light: #cb9d88;
+
+/* Spacing  */
+
+// Padding
+$p0: 0rem;
+$p1: 1rem;
+$p2: 2rem;
+$p3: 3rem;
+$p4: 4rem;
+$p5: 5rem;
+$p6: 6rem;
+$p7: 7rem;
+
+// Margin
+$m0: 0rem;
+$m1: 1rem;
+$m2: 2rem;
+$m3: 3rem;
+$m4: 4rem;
+$m5: 5rem;

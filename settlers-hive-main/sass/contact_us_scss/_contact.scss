@@ -1,0 +1,159 @@
+@import "../variables/variables";
+
+.contact-page {
+  background-color: $charcoal;
+  padding-bottom: $p4;
+  .container {
+    max-width: 1320px;
+    margin: $m0 auto;
+    padding: $p3;
+  }
+  h2 {
+    font-family: $headingFont;
+    font-size: $h2-fs;
+    text-transform: uppercase;
+    color: $cream;
+    margin: 0 auto;
+    padding-left: $p1;
+  }
+  .contact-header {
+    color: $cream;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .dvd-inquiries {
+    background-color: $mauve-light;
+    padding: $p4 $p0;
+  }
+  h3 {
+    padding: $p1 $p1;
+    color: $charcoal;
+    font-family: $headingFont;
+    font-size: $h3-fs;
+  }
+  .dvd-paragraph {
+    font-family: $bodyFont;
+    font-size: $body-fs;
+    color: $charcoal;
+    margin: $m1 $m0;
+    padding: $p1 $p1;
+  }
+
+  .dvd-list {
+    color: $charcoal;
+    font-family: $bodyFont;
+    font-size: $body-fs;
+    margin: $m0;
+    padding-left: $p5;
+  }
+}
+.contact-section {
+  padding: $p2 $p0;
+  .container {
+    // background-color: $cream;
+    margin-top: $p2 $p0;
+    h3 {
+      color: $cream;
+      padding: $p1 $p2;
+    }
+    .contact-form {
+      // margin-top: 2rem;
+      form {
+        .wpforms-field {
+          label {
+            color: $cream;
+            font-family: $bodyFont;
+            font-size: $body-fs;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            margin-top: $m1;
+            margin-left: $m2;
+          }
+          input {
+            width: 80%;
+            height: 40px;
+            max-width: 400px;
+            margin-left: $m2;
+          }
+          textarea {
+            width: 80%;
+            height: 100px;
+            margin-bottom: $m2;
+            margin-left: $m2;
+          }
+        }
+        .wpforms-field-checkbox {
+          ul {
+            margin: 0;
+            padding: 0;
+            li {
+              display: flex;
+              margin-bottom: $m1;
+              input {
+                width: 30px;
+                height: 30px;
+              }
+              label {
+                margin: 0;
+                margin-left: $m1;
+                color: $cream;
+              }
+            }
+          }
+        }
+      }
+      .wpforms-submit-container {
+        button {
+          width: 100px;
+          height: 40px;
+          font-family: $bodyFont;
+          text-transform: uppercase;
+          border-radius: 0.5rem;
+          align-items: center;
+          background-color: $mauve-light;
+          color: $charcoal;
+          margin-left: $m2;
+        }
+        a {
+          padding: $p2 $p2;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-section {
+    padding: $p3 $p0;
+    .contact-header {
+      padding-top: $p7;
+      padding-bottom: $p4;
+    }
+    h2 {
+      padding-bottom: $p1;
+    }
+    h3 {
+      padding-bottom: $p1;
+    }
+
+    .dvd-inquiries .dvd-paragraph {
+      width: 70%;
+    }
+
+    .container .contact-form {
+      form {
+        .wpforms-field {
+          input {
+            width: 90%;
+          }
+          textarea {
+            width: 600px;
+          }
+          label {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

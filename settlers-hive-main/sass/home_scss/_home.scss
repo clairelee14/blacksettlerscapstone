@@ -1,0 +1,756 @@
+@import "../variables/variables";
+
+h2 {
+    font-size: $h2-fs;
+    font-family: $headingFont;
+ }
+
+ h3 {
+     font-size: $h3-fs;
+     font-family: $headingFont;
+
+ }
+
+ p {
+     font-size: $body-fs;
+     font-family: $bodyFont;
+ }//End general css
+
+// Mobile site
+body {
+	overflow-x: hidden !important;
+}
+.home-page-site-main {
+    position: relative;
+}
+
+.site-main{
+    .banner-video {
+        position: relative;
+
+        width: 100vw;
+        height: calc(100vh - 10rem);
+        background-color: $charcoal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .entro-video {
+            
+            max-width: 1320px;
+            margin: 0 auto;
+            min-height: 400px;
+    
+         
+          .down-arrow {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            bottom: 4rem;
+            left: calc(50% - 2.45rem);
+            z-index: 1000;
+
+            a {
+                // scroll-behavior: smooth;
+                height: 100%;
+                width: 5rem;
+                display: block;
+                
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    fill: $cream;
+        
+                    &:hover {
+                        scale: 0.8;
+                        cursor: pointer;
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+    
+          }
+            video {
+                position: absolute;
+                top: 2rem !important;
+                left: 0;
+                max-width: 100%;
+                max-height: 95%;
+            }
+          }//Entro video ends
+    } //banner-video ends
+    
+    .site-main-home {
+
+        //About us setion start
+        .about-us {
+            background-image: url('../../assets/images/texture.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            width: 100vw;
+            height: calc(100vh - 6rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            // padding: $p1;
+
+            .about-us-content-wrapper {
+                position: relative;
+                height: 70%;
+                max-width: 1320px;
+                margin: 0 auto;
+
+                .about-us-h2 {
+                    margin-bottom: 4rem;
+                    color: $charcoal;
+                    text-align: center;
+                }
+                
+                .about-us-content {
+                    background-color: $mauve-dark;
+                    padding: 10rem $p2 $p2;
+                    margin: 0 $m1 $m2;
+                    margin-left: 0;
+                    color: $cream;
+                    border-radius: 0 0 5px 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    transform: translateY(45%);
+
+                    border-radius: 0 20px 0 20px;
+                    max-width: 530px;
+                    
+                    .about-us-img {
+                        position: absolute;
+                        top: -15rem;
+                    }
+
+                    .about-us-p1 {
+                        margin-bottom: $m2;
+                    }
+                }
+    
+            } //.about-us-content-wraper
+        } //about-us ends
+
+        //Poem section home start
+        .poem-home{
+            background-image: url('../../assets/images/paper-poem.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            width: 100vw;
+            height: 100vh;
+            // padding: $p5 10rem $p5 0;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+            .poem-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                padding: $p1 0 $p1 $p2;
+                position: relative;
+                max-width: 1320px;
+                margin: 0 auto;
+                
+                background-color:$mauve-medium;
+
+                .poem-text-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    padding: $p5 $p2 $p1 !important;
+                    
+                    p {
+                        margin-bottom: $p2;
+                        padding-top: $p1;
+
+                    }
+                } // poem-text-wrapper ends
+            } //Poem-wrapper ends
+
+            .poem-image {
+                position: absolute;
+                right: calc(50% - 12rem);
+                top: -16rem;
+                max-width: 250px;
+                max-height: 250px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+        } //Poem-home ends
+
+        .communities-home {
+            height: auto;
+            width: 100vw;
+            background-color: $brown-dark;
+
+            padding: 8rem $p1 $p2 0;
+            
+
+            .communities-intro {
+                max-width: 1320px;
+                margin: $m1 auto;
+
+                padding: 0 $p2;
+
+                .communities-h2 {
+                    margin-bottom: $m2;
+                }
+                .communities-intro-p {
+                    margin-bottom: $m4;
+                    max-width: 60ch;
+                }
+            }
+
+            .community-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                gap: 1rem;
+                flex-wrap: wrap;
+                max-width: 1320px;
+                margin: 0 auto;
+                padding: 0 $p1;
+
+
+                .community-card {
+                    display: flex;
+                    flex-direction: column;
+
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    background-color: $cream;
+    
+                    margin: 0 $m1;
+                    padding-bottom: $p1;
+                    margin-bottom: $m2;
+                    border-radius: 1rem;
+    
+                    // height: auto;
+                    max-width: 340px;
+
+                    &:hover {
+                        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                        transform: translateY(-4px);
+                    }
+                  
+                    .community-card-img {
+                        height: 250px;
+                        overflow: hidden;
+                    
+                  
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                  
+                    .community-card-text {
+                      padding: $p1 $p2;
+                      margin-top: $m2;
+                      text-align: left;
+                      height: auto;
+                  
+                      .community-card-h4 {
+                        margin-bottom: $m2 !important;
+                        font-weight: bold;
+                      }
+                  
+                      > p {
+                        color: #555;
+                        margin-bottom: 2.5rem !important;
+                      }
+    
+                    }
+    
+                    .button-community {
+                        width: 70% !important;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: auto;
+                      }
+                } //Communities-card ends
+
+            } //communities-wrapper ends
+              
+        } // communities-home ends
+
+        .paved-ways {
+            width: 100vw;
+            height: calc(100vh - 5rem);
+            padding: $p2;
+
+            background-color: $charcoal;
+            color: $cream;
+
+            display: flex;
+            align-items: center;
+
+            .paved-ways-wrapper {
+                max-width: 1320px;
+                margin: 0 auto;
+
+                padding: 0 $p2;
+                
+              .paved-ways-intro {
+                height: 30%;
+                margin-bottom: $m5;
+                  > h2 {
+                      margin-bottom: $m2;
+                      color: $burntOrange-medium;
+                  }
+  
+                  > p {
+                      margin-bottom: $m2;
+                  }
+              } //paved-ways-intro ends
+  
+              .paved-ways-content {
+                height: 60%;
+
+                    .paved-ways-description {
+                        .our-first {
+                            .first-image {
+                              
+                                > img {
+                                    max-width: 100%;
+                                    margin: $m1 auto;
+                                    margin-bottom: $m1;
+                                }
+                            }
+                            .first-text-wrapper {
+                              > h4 {
+                                  margin: $m1 0 $m1  0;
+                                  color: $burntOrange-medium;
+                              }
+  
+                              > p {
+                                    margin-bottom: $m2;
+                                    max-width: 60ch;
+                              }
+                        }
+                      }
+                  }
+
+                  .button-home-first {
+                    margin-top: 5rem;
+                  }
+              } //paved-ways-content  ends
+            } //paved-ways-wrapper ends
+        }// paved-ways ends
+
+        .gather-around-fire {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: calc(100vh - 4rem);
+            width: 100vw;
+            
+            padding: $p5 $p2;
+            background-color: $cream;
+            overflow: hidden;
+
+            .gather-around-fire-section {
+                max-width: 1320px;
+                margin: 0 auto;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .gather-around-fire-intro {
+                    margin-right: auto;
+                    padding: $p1;
+                    
+                    > h2 {
+                        margin-bottom: $m1;
+                    }
+
+                    > p {
+                        margin-bottom: $m2;
+
+                    }
+                }
+
+                .gather-around-fire-content {
+                    width: 100%;
+                    max-height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: $m5;
+
+                    .gather-around-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        width: 320px;
+                        height: auto;
+                        background-color: white;
+                        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+                        border-radius: 3px;
+                        overflow: hidden;
+                        transition: all 0.3s ease;
+                      
+                        &:hover {
+                          transform: translateY(-8px);
+                          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+                        }
+                      
+                        .gather-around-image {
+                          img {
+                            display: block;
+                            max-width: 100%;
+                            margin: auto;
+                            height: 150px;
+                          }
+                        }//gather-around-image 
+                      
+                        .gather-around-text-wrapper {
+                            padding: $p3;
+                            background-color: $mauve-medium;
+                            color: $cream;
+                            height: auto;
+
+                            h5 {
+                                color: $burntOrange-dark;
+                            }
+
+                            .gather-around-heading {
+                                margin-top: 0;
+                                margin-bottom: 1rem;
+                                font-weight: bold;
+                                color: $charcoal;
+                            }
+                      
+                            .gather-around-text {
+                                margin-top: 0;
+                                margin-bottom: $m3;
+                            }
+                           
+                        } //gather-around-text-wrapper
+                    } //Gather-around-wrapper ends
+                      
+                } //gather-around-fire-content
+            } //gather-around-fire-section
+        } //gather-around-fire
+
+        @media screen and (min-width: 600px) {
+           
+            .about-us {
+                justify-content: flex-start !important;
+                padding-left: $p3;
+
+                .about-us-h2 {
+                    text-align: left !important;
+                    margin-bottom: 0 !important;
+                    transform: translateY(7rem) !important;
+                }
+
+                .about-us-content {
+                    padding: $p3 $p2 $p2 !important;
+                    transform: translateY(30%) !important;
+    
+                    max-width: 80% !important; 
+                    height: 350px !important;
+
+                    .about-us-img {
+                        top: 16% !important;
+                        right: -10rem !important;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .about-us-text {
+
+                        .about-us-p1 {
+                          width: 70%;
+                          padding-left: $p2;
+                        }
+                    }
+    
+                    a {
+                        margin-right: auto;
+                        margin-left: $m2;
+                    }
+                } //about-us-content ends
+
+            } //about-us query
+
+            .community-wrapper {
+             
+              justify-content: left !important;
+
+              .community-card {
+                max-width: 45% !important;
+            }
+
+
+            }
+
+            //Poem section home start
+            .poem-home{
+                
+                .poem-wrapper {
+                    flex-direction: row-reverse !important;
+
+                    .poem-text-wrapper {
+
+                        flex: 1;
+                    
+                    } // poem-text-wrapper ends
+                } //Poem-wrapper ends
+
+                .poem-image {
+                    flex: 2;
+                    position: unset !important;
+                    margin-right: 1.47rem !important;
+                }
+
+            } //Poem-home ends
+
+            .paved-ways {
+                .paved-ways-wrapper {
+                    .paved-ways-intro {
+                        margin-bottom: 5rem !important;
+                        width: 100% !important;
+
+                        >p {
+                            max-width: 70ch;
+                        }
+
+                    } //paved-ways-intro ends
+
+                    .paved-ways-content {
+
+                        .our-first {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            align-items: center;
+                            justify-content: left;
+                            gap: 2rem; 
+                            
+                            .first-text-wrapper {
+                                margin-bottom: $m5 !important;
+                                margin-right: 10%;
+                            } 
+                        
+                            .first-image {
+                                max-width: 700px;
+                                > img {
+                                    max-width: 100%;
+                                    margin: $m1 auto;
+                                    margin-bottom: $m1;
+                                }
+                            }
+                        }//our-first ends
+
+                        .button-home-first {
+                            margin-top: 0 !important;
+                            transform: translateY(-5rem);
+                        }
+                    }//paved-ways-content ends
+                } //paved-ways-wrapper ends
+            } //paved-ways ends
+
+            .gather-around-fire {
+                .gather-around-fire-intro {
+                    > p {
+                        padding-right: 15rem;
+                    }
+                }
+                .gather-around-fire-content {
+                    .gather-around-wrapper {
+                        flex-direction: row-reverse !important;
+                        width: 95% !important;
+                        align-items: stretch;
+                        max-height: 30rem;
+
+                        .gather-around-image {
+                            flex: 1.5;
+
+                            img {
+                                width: 100%;
+                                height: -webkit-fill-available !important;
+                            }
+                        }
+                        
+                        .gather-around-text-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex: 2;
+                        }
+
+                    }//.gather-around-wrapper ends
+                }//.gather-around-fire-content
+            }//gather-around-fire ends
+        } //media query 600 ends
+
+        @media screen and (min-width: 900px) {
+            .community-card {
+                width: 30% !important;
+                justify-content: center !important;
+            } // community-card ends
+
+            .about-us {
+               
+    
+                .about-us-content-wrapper {
+                 
+                    .about-us-h2 {
+                        margin-bottom: 4rem;
+                        color: $charcoal;
+                        text-align: center;
+                    }
+                    
+                    .about-us-content {
+                        background-color: $mauve-dark;
+                        padding: 10rem $p2 $p2;
+                        margin: 0 $m1 $m2;
+                        margin-left: 0;
+                        color: $cream;
+                        border-radius: 0 0 5px 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateY(45%);
+    
+                        border-radius: 0 20px 0 20px;
+                        max-width: 530px;
+                        
+                        .about-us-img {
+                            position: absolute;
+                            top: -5% !important;
+                            right: -15rem !important;
+                            bottom: -5% !important;
+                            max-width: 50rem !important;
+                        }
+    
+                        .about-us-p1 {
+                            margin-bottom: $m2;
+                            padding-right: 20rem;
+                        }
+                    }
+        
+                } //.about-us-content-wraper
+            } //about-us ends
+
+            .poem-home{
+            
+                .poem-wrapper {
+                    flex-direction: row-reverse !important;
+    
+                    .poem-text-wrapper {
+    
+                        flex: 1;
+                        padding-right: 11rem !important; 
+                    } // poem-text-wrapper ends
+                } //Poem-wrapper ends
+    
+                .poem-image {
+                   
+                    max-width: 500px !important;
+                    transform: translateY(-8rem);
+                    margin-right: 0 !important;
+    
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+    
+            } //Poem-home query 900 ends
+            .gather-around-fire {
+                .gather-around-fire-intro {
+                    > p {
+                        padding-right: 25rem;
+                    }
+                }
+                .gather-around-fire-content {
+                    .gather-around-wrapper {
+                        flex-direction: row-reverse !important;
+                        width: 95% !important;
+                        align-items: stretch;
+                        max-height: 30rem;
+
+                        .gather-around-image {
+                            flex: 1;
+
+                            img {
+                                width: 100%;
+                                height: -webkit-fill-available !important;
+                            }
+                        }
+                        
+                        .gather-around-text-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex: 2;
+
+                            .gather-around-text {
+
+                                > p {
+                                    max-width: 60ch;
+                                }
+                            }
+                        }
+
+                    }//.gather-around-wrapper ends
+                }//.gather-around-fire-content
+            }//gather-around-fire 900 ends
+        } // media query 900 ends
+
+    } //site-main-home ends
+} //site-main ends
+
+
+/* Button styles */
+a.button-home{
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    background-color: $burntOrange-dark;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: $burntOrange-light;
+        color: black;
+    }
+}
+
+  
+
+  

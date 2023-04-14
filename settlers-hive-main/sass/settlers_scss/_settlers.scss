@@ -1,0 +1,843 @@
+@import "../variables/variables";
+
+    h2 {
+       font-size: $h2-fs;
+       font-family: $headingFont;
+       font-weight: $headingFontWeight;
+    }
+
+    h3 {
+        font-size: $h3-fs;
+        font-family: $headingFont;
+        font-weight: $headingFontWeight;
+    }
+    
+    h4 {
+        font-size: $h4-fs;
+        font-family: $headingFont;
+        font-weight: $headingFontWeight;
+    }
+
+    h5 {
+        font-size: $h5-fs;
+        font-family: $headingFont;
+        font-weight: $headingFontWeight;
+    }
+
+    p {
+        font-size: $body-fs;
+        font-family: $bodyFont;
+    }//End general css
+
+    .site-main-settler {
+        position: relative;
+        
+        .our-story-content {
+            width: 100vw;
+            height: 60vh;
+            background-color: $charcoal;
+
+            display: flex;
+            align-items: center;
+
+            .our-story-settlers {
+                
+                max-width: 1320px;
+                margin: 0 auto;
+
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5rem;
+
+                .content-intro {
+                    color: $cream;
+                    flex: 1.5;
+        
+                    > h2 {
+                        margin-bottom: $m2;
+                    }
+        
+                    > p {
+                        margin-bottom: $m4;
+                    }
+                } //content-intro ends
+    
+                .page-banner-image {
+                    flex: 2;
+                    img {
+                        width: 70%;
+                        margin: 0 auto;
+                        margin-bottom: -0.5rem;
+                    }
+                } // page-banner-image ends
+            } //our-story-settlers ends
+            
+        } //our-story-content
+        .site-wrapper {
+        
+            .page-content-intro {
+                background-color: $charcoal;
+                height: fit-content;
+
+                .page-content-settler {
+                    max-width: 1320px;
+                    margin: 0 auto;
+                    padding: 7% 3rem;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: left;
+                    gap: 2rem;
+                    
+                    .content-intro {
+                        max-width: 90ch;
+
+                        h2 {
+                            color: $burntOrange-medium;
+                        }
+
+                        p {
+                            color: $cream;
+                        }
+                    } //content-intro ends
+
+                    .page-banner-image {
+                        max-width: 100%;
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                } //page-content-settler ends
+
+            } // page-content-intro ends
+            
+            .page-content {
+        
+                background-color: $mauve-medium;
+                padding: $p4;
+
+        
+        
+                .timeline {
+                    max-width: 1320px;
+                    margin: 0 auto;
+        
+                    > p {
+                        color: $cream;
+                        margin-bottom: $m2;
+                    }
+        
+                    .container {
+                        background-color: transparent;
+                        padding-bottom: 0rem;
+                        padding-top: 0;
+                    }
+        
+                    // Timeline styles 
+        
+                    //Verticle line
+                    .main-timeline {
+        
+                        margin-top: 5rem;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            clear: both;
+                            content: "";
+                            width: 3px;
+                            height: 100%;
+                            background: $brown-dark;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                        }
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            clear: both;
+                        }
+                        .timeline {
+                            width: 50%;
+                            float: left;
+                            position: relative;
+                            z-index: 1;
+                            &:before {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                clear: both;
+                            }
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                clear: both;
+                            }
+                            &:first-child {
+                                &:before {
+                                    content: "";
+                                    width: 25px;
+                                    height: 25px;
+                                    border-radius: 50%;
+        
+                                    //Dot on the top
+                                    background: $charcoal;
+                                    border: 4px solid $mauve-dark;
+                                    position: absolute;
+                                    top: 0;
+                                    right: -14px;
+                                    z-index: 1;
+                                }
+                                margin: 0;
+                            }
+                            &:last-child {
+                                &:before {
+                                    content: "";
+                                    width: 25px;
+                                    height: 25px;
+                                    border-radius: 50%;
+                                    // Bottom dot
+                                    background: $charcoal;
+                                    border: 4px solid $mauve-dark;
+                                    position: absolute;
+                                    top: 0;
+                                    right: -14px;
+                                    z-index: 1;
+                                    top: auto;
+                                    bottom: 0;
+                                }
+                                &:nth-child(even) {
+                                    &:before {
+                                        right: auto;
+                                        left: -12px;
+                                        bottom: -2px;
+                                    }
+                                    margin: 0;
+                                }
+                            }
+                            &:nth-child(2n) {
+                                .timeline-content {
+                                    float: right;
+                                }
+                                .circle {
+                                    float: right;
+                                    margin: 0 0 0 25px;
+                                    &:before {
+                                        right: auto;
+                                        left: -33px;
+                                        box-shadow: -7px 0 9px -7px $charcoal inset;
+                                    }
+                                    span {
+                                        &:before {
+                                            right: auto;
+                                            left: -33px;
+                                            border-radius: 0 0 21px 0;
+                                        }
+                                        &:after {
+                                            right: auto;
+                                            left: -33px;
+                                            border-radius: 0 0 21px 0;
+                                            border-radius: 0 21px 0 0;
+                                        }
+                                    }
+                                }
+                                .content {
+                                    padding: 0 0 0 40px;
+                                    margin-left: 2px;
+                                    max-height: 100%;
+                                    margin-left: 1rem;
+                                }
+                                .icon {
+                                    right: auto;
+                                    left: -14px;
+                                    &:before {
+                                        left: auto;
+                                        right: -15px;
+                                    }
+                                    span {
+                                        &:before {
+                                            left: auto;
+                                            right: -15px;
+                                            border-radius: 0 0 0 21px;
+                                        }
+                                        &:after {
+                                            left: auto;
+                                            right: -15px;
+                                            border-radius: 21px 0 0 0;
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                margin-top: 180px;
+                            }
+                            &:nth-child(odd) {
+                                margin: -17px 0 0 0;
+                            }
+                            &:nth-child(even) {
+                                margin-top: 370px;
+                            }
+                        }
+                        .timeline-content {
+                            text-align: center;
+                            margin-top: 8px;
+                            position: relative;
+                            transition: all 0.3s ease 0s;
+                            &:before {
+                                content: "";
+                                width: 100%;
+                                height: 5px;
+                                // Horizontal line
+                                background: $brown-dark;
+                                position: absolute;
+                                top: 88px;
+                                left: 0;
+                                z-index: -1;
+                            }
+                        }
+                        .circle {
+                            //Image holder
+                            width: 180px;
+                            height: 180px;
+                            border-radius: 5px;
+                            background: $burntOrange-medium;
+                            border: 8px solid $brown-dark;
+                            float: left;
+                            margin-right: 20px;
+                            position: relative;
+                            &:before {
+                                content: "";
+                                width: 26px;
+                                height: 30px;
+                                background: $brown-dark;
+                                margin: auto;
+                                position: absolute;
+                                top: 0;
+                                right: -33px;
+                                bottom: 0;
+                                z-index: -1;
+                                box-shadow: inset 7px 0 9px -7px $brown-dark;
+                            }
+                            span {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                line-height: 268px;
+                                font-size: 80px;
+                                color: $cream;
+                                &:before {
+                                    content: "";
+                                    width: 28px;
+                                    height: 50px;
+                                    background: $mauve-medium;
+                                    border-radius: 0 0 0 21px;
+                                    margin: auto;
+                                    position: absolute;
+                                    top: -54px;
+                                    right: -33px;
+                                    bottom: 0;
+                                    z-index: -1;
+                                }
+                                &:after {
+                                    content: "";
+                                    width: 28px;
+                                    height: 50px;
+                                    background: $mauve-medium;
+                                    border-radius: 0 0 0 21px;
+                                    margin: auto;
+                                    position: absolute;
+                                    top: -54px;
+                                    right: -33px;
+                                    bottom: 0;
+                                    z-index: -1;
+                                    border-radius: 21px 0 0 0;
+                                    top: 0;
+                                    bottom: -56px;
+                                }
+                            }
+                            .img {
+                                vertical-align: initial;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        .content {
+                            display: table;
+                            padding-right: 40px;
+                            position: relative;
+                            margin-left: 1rem;
+                            
+                            .title {
+                                font-size: 25px;
+                                font-weight: bold;
+                                color: $charcoal;
+                                margin-top: 0;
+                            }
+        
+                            .year {
+                                display: block;
+                                padding: 20px;
+                                background: url('../../assets/images/background-timeline.png');
+                                border-radius: 3px;
+                                font-size: 16px;
+                                color: #905329;
+                                text-align: left;
+                                max-width: 350px !important;
+                                
+                                margin: 2rem auto !important;
+                                // margin-bottom: 5rem !important;
+                                // margin-top: -1rem !important;
+                            }
+                      
+                            .description {
+                                font-size: 14px;
+                                color: $cream;
+                                text-align: left;
+                            }
+                            .icon {
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background: $charcoal;
+                                border: 4px solid $brown-dark;
+                                position: absolute;
+                                top: 78px;
+                                right: -14px;
+                                &:before {
+                                    content: "";
+                                    width: 15px;
+                                    height: 25px;
+                                    background: $brown-dark;
+                                    margin: auto;
+                                    position: absolute;
+                                    top: -1px;
+                                    left: -15px;
+                                    bottom: 0;
+                                    z-index: -1;
+                                }
+                                span {
+                                    &:before {
+                                        content: "";
+                                        width: 21px;
+                                        height: 25px;
+                                        background: $mauve-medium;
+                                        border-radius: 0 0 21px 0;
+                                        margin: auto;
+                                        position: absolute;
+                                        top: -30px;
+                                        left: -15px;
+                                        bottom: 0;
+                                        z-index: -1;
+                                    }
+                                    &:after {
+                                        content: "";
+                                        width: 21px;
+                                        height: 25px;
+                                        background: $mauve-medium;
+                                        border-radius: 0 0 21px 0;
+                                        margin: auto;
+                                        position: absolute;
+                                        top: -30px;
+                                        left: -15px;
+                                        bottom: 0;
+                                        z-index: -1;
+                                        border-radius: 0 21px 0 0;
+                                        top: 0;
+                                        left: -15px;
+                                        bottom: -30px;
+                                    }
+                                }
+                            }
+                        }
+                    } //main-timeline ends
+                    @media only screen and (max-width: 990px) {
+                        .main-timeline {
+                            &:before {
+                                left: 100%;
+                                height: 98%;
+                            }
+        
+                            .content {
+                                padding: 0 !important;
+                                padding-right: 2rem !important;
+                                margin-left: 1rem;
+                            }
+                            .timeline {
+                                width: 100%;
+                                float: none;
+                                margin-bottom: 20px !important;
+        
+                                &:first-child {
+                                    &:before {
+                                        left: auto !important;
+                                        right: -13px !important;
+                                    }
+                                }
+                                &:last-child {
+                                    &:before {
+                                        left: auto !important;
+                                        right: -13px !important;
+                                    }
+                                }
+                                &:nth-child(2n) {
+                                    .circle {
+                                        float: left;
+                                        margin: 0 25px 0 0;
+                                        &:before {
+                                            right: -33px;
+                                            left: auto;
+                                            box-shadow: 7px 0 9px -7px #444 inset;
+                                        }
+                                        span {
+                                            &:before {
+                                                right: -33px;
+                                                left: auto;
+                                                border-radius: 0 0 0 21px;
+                                            }
+                                            &:after {
+                                                right: -33px;
+                                                left: auto;
+                                                border-radius: 0 0 0 21px;
+                                                border-radius: 21px 0 0 0;
+                                            }
+                                        }
+                                    }
+                                    
+                                    .icon {
+                                        right: -14px;
+                                        left: auto;
+                                        &:before {
+                                            left: -15px;
+                                            right: auto;
+                                        }
+                                        span {
+                                            &:before {
+                                                left: -15px;
+                                                right: auto;
+                                                border-radius: 0 0 21px 0;
+                                            }
+                                            &:after {
+                                                left: -15px;
+                                                right: auto;
+                                                border-radius: 0 21px 0 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    margin: 0;
+                                }
+                                &:nth-child(odd) {
+                                    margin: 0;
+                                }
+                                &:nth-child(even) {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    } //mediaquery 990px ends
+
+
+                    @media only screen and (max-width: 480px) {
+                        .main-timeline {
+                            &:before {
+                                left: 0;
+                                height: 99%;
+                            }
+                            .timeline {
+                                &:first-child {
+                                    &:before {
+                                        left: -12px !important;
+                                        right: auto !important;
+                                    }
+                                }
+                                &:last-child {
+                                    &:before {
+                                        left: -12px !important;
+                                        right: auto !important;
+                                    }
+                                }
+                                &:nth-child(2n) {
+                                    .circle {
+                                        width: 130px;
+                                        height: 130px;
+                                        float: none;
+                                        margin: 0 auto;
+                                    }
+                                    .content {
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                            .circle {
+                                width: 130px;
+                                height: 130px;
+                                float: none;
+                                margin: 0 auto;
+                                span {
+                                    line-height: 115px;
+                                    font-size: 60px;
+                                    &:before {
+                                        display: none;
+                                    }
+                                    &:after {
+                                        display: none;
+                                    }
+                                }
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                            .timeline-content {
+                                &:before {
+                                    width: 64%;
+                                    top: 68px;
+                                    left: 0.5%;
+                                }
+                            }
+                            .icon {
+                                display: none;
+                            }
+                            .content {
+                                padding: 0 10px;
+                            }
+                            .year {
+                                margin-bottom: 15px;
+                            }
+                            .description {
+                                text-align: center;
+                                margin-left: 10px;
+                            }
+                        } //.main-timeline ends
+                    } //Mediaquery-480px ends
+                } //timeline ends
+        
+        
+        
+        
+        
+            }
+            
+        } //site-wrapper ends
+        
+        .paved-ways {
+            padding: $p4 $p3;
+            background-color: #CB9D88;
+        
+            .paved-ways-intro {
+                max-width: 1320px;
+                margin: 0 auto;
+                margin-bottom: $m3;
+        
+                > h2 {
+                    margin-bottom: $m1;
+                }
+                
+                > p {
+                    max-width: 60ch;
+                }
+            } //paved-ways ends
+        
+            .paved-first {
+                max-width: 1320px;
+                margin: 0 auto;
+                height: auto;
+                margin-bottom: $m3;
+                
+                display: flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+                
+                .our-first {
+                    background: url('../../assets/images/settlers-first-bg.png');
+                    max-width: 300px;
+                    height: 100%;
+        
+                    .first-image {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: flex-start;
+        
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    } //first-image ends
+        
+                    .first-text-wrapper {
+                        width: 100%;
+                        height: 40%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: $p2;
+        
+                        > h4 {
+                            margin-top: $m2;
+                            margin-bottom: $m1;
+                        }
+        
+                        > p {
+                            margin-bottom: $m1;
+                            font-size: 1.3rem;
+                            max-width: 70ch;
+                        }
+                    }
+                }
+            }//paved-first ends
+        
+            > small {
+                font-size: 1rem;
+                margin-top: $m4;
+                display: block;
+                max-width: 1320px;
+                margin: 0 auto;
+            }
+        
+        } //paved-ways ends
+        
+        .gather-round {
+            background-color: $burntOrange-dark;;
+            padding: $p5 $p2;
+            height: auto;
+        
+            .gather-around-fire-intro {
+                max-width: 1320px;
+                margin: 0 auto;
+                margin-bottom: $m3;
+
+        
+                > h3 {
+                    margin-bottom: $m1;
+                    color: $pink-light;
+                }
+        
+                > p {
+                    font-size: 1.3rem;
+                    color: $cream;
+                }
+            } //gahter-around-fire-intro ends
+        
+            .gather-around-content {
+                max-width: 1320px;
+                margin: 0 auto;
+                margin-bottom: 3rem;
+
+                .gather-around-card-wrapper {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: stretch;
+                    justify-content: left;
+                    gap: 2rem;
+                    
+
+                    .gather-around-wrapper {
+                        height: 500px;
+                        max-width: 350px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        
+                        
+    
+                        .gather-around-image {
+                            height: 300px;
+                            width: 100%;
+    
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                margin: 0 auto;
+                            }
+                            
+                        } //gather-around-image ends
+    
+                        .gather-around-text-wrapper {
+                            max-width: 100%;
+                            height: 60%;
+                            padding: $p1 $p2;
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            gap: 1rem;
+                            margin: $m2 0;
+                            
+                            .gather-around-text {
+                                > p {
+                                    font-size: 1.3rem;
+                                }
+                            }
+
+                            & a {
+                                display: none;
+                            }
+                        } //gather-around-text-wrapper ends
+                    } //gather-around-wrapper ends
+                    
+                    .gather-around-wrapper:nth-child(odd) {
+                        background-color: $mauve-medium;
+                    }
+            
+                    .gather-around-wrapper:nth-child(even) {
+                        background-color: $pink-light;
+                    }
+
+                }//gahter-around-card-wrapper ends
+            } //gather-around-content
+
+        
+            
+        }//gather-round-ends
+
+        @media  screen and (min-width: 600px) {
+            .page-content-intro {
+
+                .page-content-settler {
+                    flex-direction: row !important;
+                    gap: 1rem !important;
+                    align-items: center !important;
+
+                    .content-intro {
+                        max-width: 70ch;
+                        flex: 1;
+
+                        h2 {
+                            color: $burntOrange-light;
+                        }
+
+                        p {
+                            color: $cream;
+                        }
+                    } //content-intro ends
+
+                    .page-banner-image {
+                        max-width: 50% !important;
+                        display: flex;
+                        flex: 2;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                } //page-content-settler ends
+
+            } // page-content-intro ends
+        } //media query 600 ends larger screen
+    } //site-main-settler ends
+

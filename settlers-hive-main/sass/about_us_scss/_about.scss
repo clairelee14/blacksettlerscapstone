@@ -1,0 +1,177 @@
+@import "../variables/variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $headingFontWeight;
+  font-family: $headingFont;
+  text-transform: uppercase;
+}
+
+.about-us {
+  background-color: $mauve-dark;
+  .container {
+    max-width: 1320px;
+    margin: $m0 auto;
+    padding: $p3;
+  }
+
+  h2 {
+    font-size: $h2-fs;
+    padding: $p2 $p1;
+    color: $cream;
+    margin-bottom: $m2;
+  }
+  h3 {
+    font-size: $h3-fs;
+    color: $brown-dark;
+    padding: $p1 $p1;
+    margin-top: 0;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.about-us-blurb {
+  background-color: $cream;
+  padding: $p2 $p2;
+
+  p {
+    font-family: $bodyFont;
+    font-size: $body-fs;
+    color: $charcoal;
+    padding: $p1 $p0;
+  }
+}
+
+section.meet-the-society {
+  background-color: $mauve-dark;
+  text-align: center;
+  padding: $p1;
+  margin-bottom: $m2;
+  h3 {
+    font-size: $h3-fs;
+    color: $cream;
+    margin-top: $m2;
+    margin-bottom: $m2;
+  }
+
+  p {
+    font-family: $bodyFont;
+    font-size: $body-fs;
+    color: $cream;
+    margin-top: $m2;
+    margin-bottom: $m2;
+  }
+
+  .founders {
+    color: $cream;
+    h2 {
+      font-size: $h2-fs;
+      color: $cream;
+      padding: $p2 $p1;
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    h4 {
+      font-size: $h4-fs;
+      padding: $p1 $p1;
+      color: $cream;
+      text-decoration: none;
+    }
+    h3 {
+      font-size: $h3-fs;
+      color: $cream;
+      padding: $p1 $p1;
+    }
+    h5 {
+      font-size: $h5-fs;
+      color: $cream;
+      padding: $p1 $p0;
+      padding: $p1;
+      margin-top: $m1;
+    }
+    p {
+      font-family: $bodyFont;
+      font-size: $body-fs;
+      color: $pink-light;
+    }
+  }
+  .inactive {
+    h4 {
+      font-size: $h4-fs;
+      padding: $p1 $p0;
+      color: $cream;
+      text-decoration: none;
+    }
+    h3 {
+      font-size: $h3-fs;
+      color: $cream;
+      padding: $p1 $p1;
+    }
+    h5 {
+      font-size: $h5-fs;
+      color: $cream;
+      padding: $p1 $p0;
+      padding: $p1;
+      margin-top: $m1;
+    }
+    p {
+      font-family: $bodyFont;
+      font-size: $body-fs;
+      color: $pink-light;
+    }
+  }
+  .current-members {
+    h2 {
+      font-size: $h2-fs;
+      padding: $p2 $p0;
+      color: $cream;
+      text-decoration: underline;
+    }
+    h5 {
+      font-size: $h5-fs;
+      color: $cream;
+      padding: $p1 $p0;
+      padding: $p1;
+      margin-top: $m1;
+    }
+    p {
+      font-family: $bodyFont;
+      font-size: $body-fs;
+      color: $pink-light;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main.about-us {
+    img {
+      height: 70vh;
+      object-fit: cover;
+    }
+    .meet-the-society {
+      text-align: left;
+      p {
+        max-width: 80%;
+        padding-left: $p1;
+        margin-bottom: $m2;
+      }
+    }
+    .founders-flex-container {
+      display: flex;
+      flex-direction: row;
+      .active,
+      .inactive {
+        width: 50%;
+      }
+    }
+  }
+}
